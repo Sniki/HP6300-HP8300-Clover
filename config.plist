@@ -12,20 +12,16 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
-				<key>AddMCHC</key>
-				<true/>
-				<key>Comment-IRQ Fix</key>
-				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
 				<true/>
 				<key>FixIPIC</key>
-				<true/>
+				<false/>
 				<key>FixMutex</key>
-				<true/>
+				<false/>
 				<key>FixRTC</key>
-				<true/>
+				<false/>
 				<key>FixTMR</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -139,10 +135,10 @@
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>#DefaultVolume</key>
-		<string>LastBootedVolume</string>
 		<key>Arguments</key>
 		<string>dart=0</string>
+		<key>DefaultVolume</key>
+		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -151,7 +147,7 @@
 		<integer>5</integer>
 	</dict>
 	<key>Comment</key>
-	<string>This file is for HP Compaq Elite 8300 / HP Compaq 6300</string>
+	<string>This file is for HP 8300 / HP 6300 in all form factors</string>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
@@ -162,16 +158,11 @@
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
-			<dict>
-				<key>#hda-gfx</key>
-				<string>onboard-1</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0)/Pci(0x1b,0)</key>
 			<dict>
 				<key>#Comment</key>
 				<string>Realtek ALC221 Audio Configuration</string>
-				<key>#hda-gfx</key>
-				<string>onboard-1</string>
 				<key>layout-id</key>
 				<integer>11</integer>
 			</dict>
@@ -291,7 +282,7 @@
 			</dict>
 		</array>
 		<key>KernelXCPM</key>
-		<true/>
+		<false/>
 		<key>KextsToPatch</key>
 		<array/>
 	</dict>
