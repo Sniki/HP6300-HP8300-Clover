@@ -4,13 +4,11 @@ DefinitionBlock("", "SSDT", 2, "HP", "_HP", 0)
 {
     #define NO_DEFINITIONBLOCK
     #include "SSDT-XOSI.dsl"
+    #include "SSDT-LPC.dsl"
+    #include "SSDT-EC.dsl"
     #include "SSDT-XSEL.dsl"
     #include "SSDT-ESEL.dsl"
     #include "SSDT-USB.dsl"
-    #include "SSDT-IMEI.dsl"
-    #include "SSDT-LPC.dsl"
-    #include "SSDT-SMBUS.dsl"
-    #include "SSDT-EC.dsl"
     #include "SSDT-ALC221.dsl"
 
 }

@@ -12,7 +12,11 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
+				<key>AddMCHC</key>
+				<true/>
 				<key>FixHPET</key>
+				<true/>
+				<key>FixSBUS</key>
 				<true/>
 				<key>FixIPIC</key>
 				<false/>
@@ -136,7 +140,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0</string>
+		<string>dart=0 -cdfon</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>

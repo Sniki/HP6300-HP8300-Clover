@@ -9,8 +9,8 @@
 /* Begin PBXFileReference section */
 		DFB0431A22B5795E00F06E0F /* hotpatch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hotpatch; sourceTree = "<group>"; };
 		DFB0431B22B5795E00F06E0F /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
-		DFB0431C22B5795E00F06E0F /* SSDT-HP.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSDT-HP.aml"; sourceTree = "<group>"; };
 		DFB0431D22B5795E00F06E0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DFF8B51022E7A3E000A546C8 /* SSDT-HP.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSDT-HP.aml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -20,7 +20,7 @@
 				DFB0431B22B5795E00F06E0F /* config.plist */,
 				DFB0431A22B5795E00F06E0F /* hotpatch */,
 				DFB0431D22B5795E00F06E0F /* README.md */,
-				DFB0431C22B5795E00F06E0F /* SSDT-HP.aml */,
+				DFF8B51022E7A3E000A546C8 /* SSDT-HP.aml */,
 			);
 			sourceTree = "<group>";
 		};
