@@ -1,4 +1,6 @@
 // USB Port Injector for HP Elite 8300 MT/SFF/USDT & HP 6300 PRO/SFF
+// Disabled ESEL and XSEL to avoid USB routing problems
+// Injected Fake EC device for USB Power Properties to work
 
 #ifndef NO_DEFINITIONBLOCK
 DefinitionBlock ("", "SSDT", 2, "HP", "_USB", 0)
@@ -151,7 +153,23 @@ DefinitionBlock ("", "SSDT", 2, "HP", "_USB", 0)
             },
         })
     }
+    // In DSDT, native XSEL is renamed ZSEL
+    // As a result, calls to it land here.
+    External(_SB.PCI0.XHC, DeviceObj)
+    Method(_SB.PCI0.XHC.ESEL)
+    {
+        // do nothing
+    }
+    
+    Method(_SB.PCI0.XHC.XSEL)
+    {
+        // do nothing
+    }
+    
+    Device(_SB.EC)
+    {
+        Name(_HID, "EC000000")
+    }
 #ifndef NO_DEFINITIONBLOCK
 }
 #endif
-//EOF

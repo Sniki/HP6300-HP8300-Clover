@@ -1,4 +1,4 @@
-// CodecCommander configuration for ALC221 to fix various issue
+// CodecCommander configuration for ALC221 to fix various issues.
 // Configured from Codec_Dump, to be used on HP Compaq Elite 8300 / HP Compaq 6300 Pro (all form factors)
 // Credits "Sniki"
 
@@ -48,4 +48,3 @@ DefinitionBlock ("", "SSDT", 1, "HP", "_ALC221", 0)
 #ifndef NO_DEFINITIONBLOCK
 }
 #endif
-//EOF

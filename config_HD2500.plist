@@ -8,8 +8,6 @@
 		<true/>
 		<key>DSDT</key>
 		<dict>
-			<key>DropOEM_DSM</key>
-			<false/>
 			<key>Fixes</key>
 			<dict>
 				<key>AddMCHC</key>
@@ -18,27 +16,9 @@
 				<true/>
 				<key>FixSBUS</key>
 				<true/>
-				<key>FixIPIC</key>
-				<false/>
-				<key>FixMutex</key>
-				<false/>
-				<key>FixRTC</key>
-				<false/>
-				<key>FixTMR</key>
-				<false/>
 			</dict>
 			<key>Patches</key>
 			<array>
-				<dict>
-					<key>Comment</key>
-					<string>change _OSI to XOSI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X09TSQ==</data>
-					<key>Replace</key>
-					<data>WE9TSQ==</data>
-				</dict>
 				<dict>
 					<key>Comment</key>
 					<string>change EHC1 to EH01</string>
@@ -58,16 +38,6 @@
 					<data>RUhDMg==</data>
 					<key>Replace</key>
 					<data>RUgwMg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>R0ZYMA==</data>
-					<key>Replace</key>
-					<data>SUdQVQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -111,36 +81,19 @@
 				</dict>
 			</array>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>#MCFG</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-		</array>
-		<key>FixHeaders</key>
-		<true/>
 		<key>SSDT</key>
 		<dict>
-			<key>DropOem</key>
-			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>PluginType</key>
 				<false/>
 			</dict>
-			<key>NoOemTableId</key>
-			<false/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -cdfon</string>
+		<string>-cdfon -igfxnohdmi</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -151,46 +104,34 @@
 		<integer>5</integer>
 	</dict>
 	<key>Comment</key>
-	<string>This file is for HP 8300 / HP 6300 in all form factors</string>
+	<string>This file is for HP 8300 / HP 6300 in all form factors using Intel HD2500 Graphics + DGPU</string>
 	<key>Devices</key>
 	<dict>
-		<key>Audio</key>
-		<dict>
-			<key>Inject</key>
-			<integer>0</integer>
-		</dict>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>BgBiAQ==</data>
+			</dict>
 			<key>PciRoot(0)/Pci(0x1b,0)</key>
 			<dict>
 				<key>#Comment</key>
 				<string>Realtek ALC221 Audio Configuration</string>
 				<key>layout-id</key>
-				<integer>11</integer>
+				<data>CwAAAA==</data>
+			</dict>
+			<key>PciRoot(0)/Pci(0x16,0)</key>
+			<dict>
+				<key>#Comment</key>
+				<string>7-Series Chipset require fake device-id 3A1C0000 for IMEI</string>
+				<key>device-id</key>
+				<data>OhwAAA==</data>
 			</dict>
 		</dict>
-		<key>USB</key>
-		<dict>
-			<key>AddClockID</key>
-			<true/>
-			<key>FixOwnership</key>
-			<true/>
-			<key>Inject</key>
-			<false/>
-		</dict>
-		<key>UseIntelHDMI</key>
-		<false/>
 	</dict>
-	<key>DisableDrivers</key>
-	<array>
-		<string>VBoxHfs</string>
-	</array>
 	<key>GUI</key>
 	<dict>
-		<key>#ScreenResolution</key>
-		<string>1920x1080</string>
 		<key>Custom</key>
 		<dict>
 			<key>Entries</key>
@@ -248,16 +189,6 @@
 	<dict>
 		<key>AppleIntelCPUPM</key>
 		<true/>
-		<key>AppleRTC</key>
-		<true/>
-		<key>DellSMBIOSPatch</key>
-		<false/>
-		<key>ForceKextsToLoad</key>
-		<array/>
-		<key>KernelLapic</key>
-		<true/>
-		<key>KernelPm</key>
-		<true/>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -285,10 +216,6 @@
 				<data>igKEwOtC</data>
 			</dict>
 		</array>
-		<key>KernelXCPM</key>
-		<false/>
-		<key>KextsToPatch</key>
-		<array/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
