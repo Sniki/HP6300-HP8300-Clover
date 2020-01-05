@@ -18,68 +18,7 @@
 				<true/>
 			</dict>
 			<key>Patches</key>
-			<array>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMQ==</data>
-					<key>Replace</key>
-					<data>RUgwMQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMg==</data>
-					<key>Replace</key>
-					<data>RUgwMg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change COPR to MATH</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>Q09QUg==</data>
-					<key>Replace</key>
-					<data>TUFUSA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change SAT0 to SATA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>U0FUMA==</data>
-					<key>Replace</key>
-					<data>U0FUQQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(XSEL,0,S) to XSEZ, pair with SSDT-XSEL.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>WFNFTAg=</data>
-					<key>Replace</key>
-					<data>WFNFWgg=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(ESEL,0,S) to ESEZ, pair with SSDT-ESEL.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RVNFTAg=</data>
-					<key>Replace</key>
-					<data>RVNFWgg=</data>
-				</dict>
-			</array>
+			<array/>
 		</dict>
 		<key>SSDT</key>
 		<dict>
@@ -93,7 +32,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-cdfon -igfxnohdmi</string>
+		<string>-igfxnohdmi</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -115,6 +54,10 @@
 				<data>CgBmAQ==</data>
 				<key>device-id</key>
 				<data>YgEAAA==</data>
+				<key>enable-hdmi20</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1b,0)</key>
 			<dict>
@@ -123,12 +66,18 @@
 				<key>layout-id</key>
 				<data>CwAAAA==</data>
 			</dict>
-			<key>PciRoot(0)/Pci(0x16,0)</key>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
 			<dict>
-				<key>#Comment</key>
-				<string>7-Series Chipset require fake device-id 3A1C0000 for IMEI</string>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,31,0</string>
+				<key>compatible</key>
+				<string>pci8086,1e42</string>
 				<key>device-id</key>
-				<data>OhwAAA==</data>
+				<data>Qh4AAA==</data>
+				<key>device_type</key>
+				<string>ISA bridge</string>
+				<key>model</key>
+				<string>Q77 Express Chipset LPC Controller</string>
 			</dict>
 		</dict>
 	</dict>
