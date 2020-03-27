@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		DF553AAF23C2300E00C22239 /* kexts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kexts; sourceTree = "<group>"; };
-		DF553AB023C2300E00C22239 /* ACPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ACPI; path = ../../Desktop/HP/ACPI; sourceTree = "<group>"; };
-		DF553AB123C2300E00C22239 /* hotpatch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hotpatch; sourceTree = "<group>"; };
 		DFB0431B22B5795E00F06E0F /* config_HD4000.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config_HD4000.plist; sourceTree = "<group>"; };
 		DFB0431D22B5795E00F06E0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DFBEF337242E0787003C0061 /* ACPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ACPI; sourceTree = "<group>"; };
+		DFBEF338242E07C6003C0061 /* kexts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kexts; sourceTree = "<group>"; };
 		DFF08032232E67BB003AE28D /* config_HD2500.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config_HD2500.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -22,9 +21,8 @@
 				DFB0431B22B5795E00F06E0F /* config_HD4000.plist */,
 				DFF08032232E67BB003AE28D /* config_HD2500.plist */,
 				DFB0431D22B5795E00F06E0F /* README.md */,
-				DF553AB023C2300E00C22239 /* ACPI */,
-				DF553AB123C2300E00C22239 /* hotpatch */,
-				DF553AAF23C2300E00C22239 /* kexts */,
+				DFBEF338242E07C6003C0061 /* kexts */,
+				DFBEF337242E0787003C0061 /* ACPI */,
 			);
 			sourceTree = "<group>";
 		};
